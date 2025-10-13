@@ -70,6 +70,8 @@ An example input for the metadata JSON:
 ```
 {% include "../.gitbook/includes/database_metadata_input.md" %}
 
+}
+
 >**Note**:  All the names of table or field mentioned here will be treated as case-sensitive and should match the actual names in Snowflake instance.
 
 # Mapping Configuration
