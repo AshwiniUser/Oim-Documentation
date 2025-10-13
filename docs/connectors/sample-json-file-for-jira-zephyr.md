@@ -645,7 +645,7 @@
 	},
 	"entityScope": "Global",
 	"fields": {
-	    "system": [...System Fields Meta as mentioned in the template...],
+	    "system": (...System Fields Meta as mentioned in the template...),
 	    "custom": [
 	        {
                 "internalName": "customNumber",
