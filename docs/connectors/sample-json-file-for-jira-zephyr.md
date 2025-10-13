@@ -632,6 +632,7 @@
   * If set to false, the custom field ID must be provided manually.
   * Since updates for Test Plans use a private API (which requires the custom field ID), the value of readCustomFieldsMeta determines whether this ID is auto-fetched or must be provided manually.
   * Example JSON for a Test Plan with readCustomFieldsMeta set to true:
+    
   ```json
   {
 	"internalName": "testplan-zephyr",
@@ -675,7 +676,7 @@
 	},
 	"entityScope": "Global",
 	"fields": {
-		"system": [...System Fields Meta as mentioned in the template...],
+		"system": (...System Fields Meta as mentioned in the template...),
 		"custom": [
 			{
 				"internalName": "customSelect",
@@ -709,5 +710,6 @@
 	}
 }
 ```
+
 * In the above JSON, the custom ID for each custom field should be specified in the systemSpecific map.
 * Users must also provide the internal IDs for the lookup field values.
