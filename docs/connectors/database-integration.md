@@ -8,7 +8,7 @@
 If a database system is needed to be integrated with a database type other than the type of database on which OpsHub Integration Manager is deployed, follow the steps given below:
 - Download the required database driver on which new database connection is to be created. Refer [this](Installation_Prerequisites#Download-Database-Connector-jar) to get the link of database connector jar.
 - Stop the OpsHub Integration Manager server.
-- Copy the downloaded driver into `[Opshub installation directory]\OpsHubServer\lib` folder.
+- Copy the downloaded driver into `Opshub installation directory]\OpsHubServer\lib` folder.
 - Start OpsHub Integration Manager server.
 
 ## Fields requirement
@@ -180,4 +180,5 @@ Here is the screenshot:
 
 * For Attachment sync, attachment file names must not contain characters that are unsupported by the operating system on which the `OpsHub Integration Manager` is installed.  
   For example, on Windows, characters such as `\ / : * ? " < > |` are not allowed in file names.
+
 
