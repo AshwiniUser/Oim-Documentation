@@ -3,7 +3,7 @@
 # Prerequisites
 
 * Zephyr (formerly known as Zephyr Scale) must be installed on your Jira Cloud domain.  
-* A user access token for integration user is required to synchronize any entities from the Zephyr plugin. Check [User Token Generation].  
+* A user access token for integration user is required to synchronize any entities from the Zephyr plugin. Check [User Token Generation](#user-token-generation).  
 >**Note**: Make sure the Zephyr service account is the same as the Jira system service account.
 
 # System Configuration
@@ -15,7 +15,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/JiraZephyrScaleSystemCreation.png.png" width="1500" />
+  <img src="../assets/JiraZephyrScaleSystemCreation.png" width="1500" />
 </p>
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
