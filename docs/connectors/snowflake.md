@@ -5,7 +5,7 @@
 * **Privileges** should be assigned to a **role** rather than directly to the user and the role should be granted to the integration user. Snowflake uses a role-based access control (RBAC) model for better security and management.
 * This dedicated user must not be used for any other operations on the Snowflake database.
 
-### Fields Requirements
+## Fields Requirements
 
 The following columns should exist in the Snowflake's tables and views for OpsHub Integration Manager to ensure seamless data synchronization.
 
