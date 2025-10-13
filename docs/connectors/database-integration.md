@@ -101,7 +101,7 @@ Here is the screenshot:
 
 An example input for the metadata JSON:
 
-{% include ".gitbook/includes/database_metadata_input.md" %}
+{% include "../.gitbook/includes/database_metadata_input.md" %}
 
 # Mapping Configuration
 
@@ -180,6 +180,7 @@ Here is the screenshot:
 
 * For Attachment sync, attachment file names must not contain characters that are unsupported by the operating system on which the `OpsHub Integration Manager` is installed.  
   For example, on Windows, characters such as `\ / : * ? " < > |` are not allowed in file names.
+
 
 
 
