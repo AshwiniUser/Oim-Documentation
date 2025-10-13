@@ -20,7 +20,7 @@ Refer the screenshot given below for reference.
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
 |----------------|--------------------------------------------|----------------|
-| **JWT Access Token** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | Provide the access token generated in Zephyr for the user given in the "User Email" field. For more details on Access Token, please refer to [User Token Generation](JiraZephyrScale#User_Token_Generation) |
+| **JWT Access Token** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | Provide the access token generated in Zephyr for the user given in the "User Email" field. For more details on Access Token, please refer to [User Token Generation](user-token-generation) |
 | **Metadata JSON** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | This data is in JSON format according to our knowledge of system metadata (entity type, field names, lookup...), the user can edit it based on his/her Jira Zephyr instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to **Understanding JSON Input** section. |
 
 ## Understanding JSON Input
@@ -31,7 +31,7 @@ Refer the screenshot given below for reference.
 * Refer to [JSON Metadata Sample](sample-json-file-for-jira-zephyr.md) for a sample JSON for Jira Zephyr entities.  
 * Users can change the display name of the entities.  
 * The internal name of each system field must match exactly as shown in the template JSON.  
-* The internal name of a custom field must match the one defined in the end system. For how to find custom field name, refer [Find Custom Field Names](#Find Custom Field Names).
+* The internal name of a custom field must match the one defined in the end system. For how to find custom field name, refer [Find Custom Field Names](#find-custom-field-names).
 
 ## Mapping Configuration
 
