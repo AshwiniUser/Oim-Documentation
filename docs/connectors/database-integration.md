@@ -127,7 +127,7 @@ An example input for the metadata JSON:
 Here is the screenshot:  
 
 <p align="center">
-  <img src="../assets/Database_Image_4a.png" width="1500" />
+  <img src="../assets/Database_Image_4a.png" width="1000" />
 </p>
 
 
@@ -180,5 +180,6 @@ Here is the screenshot:
 
 * For Attachment sync, attachment file names must not contain characters that are unsupported by the operating system on which the `OpsHub Integration Manager` is installed.  
   For example, on Windows, characters such as `\ / : * ? " < > |` are not allowed in file names.
+
 
 
