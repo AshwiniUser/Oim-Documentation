@@ -213,7 +213,7 @@ Refer the screenshot given below for reference.
 * Click **Create Access Token**, then copy and save the generated token.
 
 <p align="center">
-  <img src="../assets/JiraZephyrScaleJWTGeneration.png" width="800"/>
+  <img src="../assets/JiraZephyrScaleJWTGeneration.png" width="1200"/>
 </p>
 
 ## Find Custom Field Names
@@ -221,7 +221,7 @@ Refer the screenshot given below for reference.
 * To get the custom field information go to **Zephyr** → **Configuration** → **CUSTOM FIELDS** subsection.
 
 <p align="center">
-  <img src="../assets/JiraZephyrScaleCustomFieldList.png" width="800"/>
+  <img src="../assets/JiraZephyrScaleCustomFieldList.png" width="1200"/>
 </p>
 
 * For example, in the above image, **reviewer (Custom)** is the internal name of a custom field.
