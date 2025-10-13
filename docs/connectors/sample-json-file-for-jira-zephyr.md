@@ -634,33 +634,33 @@
   * Example JSON for a Test Plan with readCustomFieldsMeta set to true:
     
   ```json
-  {
-	"internalName": "testplan-zephyr",
-	"displayName": "Zephyr Scale Test Plan",
-	"readMechanism": "NON_HISTORY",
-	"hasReadSupport": true,
-	"hasWriteSupport": true,
-	"systemSpecific": {
-	"readCustomFieldsMeta": true
-	},
-	"entityScope": "Global",
-	"fields": {
-	    "system": (...System Fields Meta as mentioned in the template...),
-	    "custom": [
-	        {
-                "internalName": "customNumber",
-            	"displayName": "customNumber",
-            	"dataType": "numeric",
-            	"multiselect": false,
-            	"mandatory": false,
-            	"historyEnabled": false,
-            	"systemSpecific": {
-            	    "requestFieldKey": "intValue"
-                }
-            }
-	    ]
+	  {
+		"internalName": "testplan-zephyr",
+		"displayName": "Zephyr Scale Test Plan",
+		"readMechanism": "NON_HISTORY",
+		"hasReadSupport": true,
+		"hasWriteSupport": true,
+		"systemSpecific": {
+		"readCustomFieldsMeta": true
+		},
+		"entityScope": "Global",
+		"fields": {
+		    "system": [...System Fields Meta as mentioned in the template...],
+		    "custom": [
+		        {
+	                "internalName": "customNumber",
+	            	"displayName": "customNumber",
+	            	"dataType": "numeric",
+	            	"multiselect": false,
+	            	"mandatory": false,
+	            	"historyEnabled": false,
+	            	"systemSpecific": {
+	            	    "requestFieldKey": "intValue"
+	                }
+	            }
+		    ]
+		}
 	}
-}
 ```
 
 * The JSON for a Test Plan when readCustomFieldsMeta is false will be as follows:
