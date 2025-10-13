@@ -35,7 +35,6 @@
   "attachmentAddedTimeColumn": "ATTACHMENT_ADDED_TIME",
   "attachmentFolderPath ": "D:/OpsHub/attachments"
  }
-}
 ```
 
 * To store the links, comments and attachments information of data records, a separate table will be used in the same database/schema. Provide the table name and field details for this table.
@@ -84,6 +83,7 @@
 | `attachmentAddedByColumn`  | Column name storing attachment added by user name                                                             |
 | `attachmentAddedTimeColumn`| Column name storing attachment added time                                                                     |
 | `attachmentFolderPath`     | Local folder path (accessible to OIM user) where all attachment files will be stored                          |
+
 
 
 
