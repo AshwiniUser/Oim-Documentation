@@ -704,7 +704,7 @@
 				"systemSpecific": {
 					"customFieldId": "508081",
 					"requestFieldKey": "stringValue"
-				}
+                }
 			}
 		]
 	}
