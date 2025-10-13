@@ -1,4 +1,4 @@
-#Prerequisites
+# Prerequisites
 
 ## Integration user
 - A dedicated user should be created for the database integration. This user must have read and write access on the database table and read access on the view that needs to be integrated.  
@@ -180,3 +180,4 @@ Here is the screenshot:
 
 * For Attachment sync, attachment file names must not contain characters that are unsupported by the operating system on which the `OpsHub Integration Manager` is installed.  
   For example, on Windows, characters such as `\ / : * ? " < > |` are not allowed in file names.
+
