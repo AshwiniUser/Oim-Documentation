@@ -18,7 +18,7 @@
 
 <div align="center"><img src="../../assets/tfs_Integration_Criteria_Settings3.PNG" alt="" width="1100"></div>
 
-<div align="center"><img src="../../assets/tfs_target_system_with_bypass3.PNG" alt="" width="500"></div>
+<div align="center"><img src="../../assets/tfs_target_system_with_bypass3.PNG" alt="" width="600"></div>
 
 <div align="center"><img src="../../assets/tfs_mapping_field_defaultVal3.PNG" alt="" width="900"></div>
 
