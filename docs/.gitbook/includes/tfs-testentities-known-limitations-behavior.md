@@ -1,10 +1,4 @@
-**Specific Entity**
-
-Following are the limitations and behaviors specific to the individual entities in addition to the common:
-
-### Test Entities (Test Case, Test Plan, Test Suite, Test Result, Test Run)
-
-#### Common
+# Common
 
 * Impersonation is not supported.
 
@@ -12,42 +6,30 @@ Following are the limitations and behaviors specific to the individual entities 
 
 Following are the limitations and behaviors specific to the individual entities in addition to the common:
 
-#### Test Case
-
+## Test Case
 * Test Parameters having only numeric characters in their name are not supported.
 * If Test Case step field like Action or Expected Result contains only image and no text, then Azure DevOps does not render the inline image on user interface. However, the inline image can be seen from history.
 * If Test Case step field contains a hyperlink, then Azure DevOps does not allow to click on the link from user interface.
 * When updating only test case steps, parameters, and parameter values - Updating only these fields won't be synced to target. To overcome this limitation, it is always recommended to use overwrite option for all these fields while configuring field mapping.
 
-#### Test Plan
-
-* Synchronization is not supported with REST APIs.
-* Inline image synchronization is not supported.
+## Test Plan
+* REST API–based synchronization is not supported for on-premises instances of Azure DevOps Server prior to version 2020.
 * Links of 'Remote Work', 'Release pipeline', 'Build', 'GitHub', 'Git' and 'Wiki' with Test Plan are not supported.
-* Test Run settings, Outcome settings, MTM settings and MTM environments are not supported in Test Plan.
+Test Run settings, Outcome settings, MTM settings and MTM environments are not supported in Test Plan.
 * For TFS version below 2013-Update 3, Test Plan is not supported as a separate entity. Test Plan with few fields will synchronize with Test Suite synchronization. Also, Test Plan with duplicate name will not get synchronized.
-* Test Plan as a separate entity is supported from OIM version 7.46. For fresh project synchronization, it is recommended to synchronize Test Plan separately, followed by Test Suite, Test Run and Test Result. After migrating to OIM version >= 7.46 from older version, if you want to synchronize Test Plan separately in running integrations, please refer to [post migration guideline for Test Plan entity support](../post-migration_checklist/#test_plan_entity_support_for_tfs.azure_devops).
-
-#### Test Suite
-
-* Synchronization is not supported with REST APIs.
-* Inline image synchronization is not supported.
-* Test Suite will migrate current state. Any changes in the target system after synchronization may show inconsistency in data in both end points.
-* Synchronization of Test Case chart and Test Result chart created within test suite is not supported
-* Query-Based Suite or Requirement-Based Suite.\
-
-  *   Once a Query-Based Suite or Requirement-Based Suite synced to target system, then after any new linkage of Test-Case with test suite added due to modification in test case. Hence newly added Test-Case linkage of Test Suite will not
-
-      to the target system and any Test Run with corresponding test point will resulted into processing failure. In such case do following. click [here](../../connectors/team-foundation-server.md-troubleshoot) for troubleshoot.
-*   Any update in Test Suite Configuration will
-
-    only when test suite is updated.
-* Ordering in Test Cases which are added to Test Suite is supported only for version 2019 onwards for on-premise deployments (i.e. Team Foundation Server) and all cloud deployments (i.e. Azure DevOps). In addition to that, ordering is only possible when the user has selected authentication type as Personal Access Token in the system configuration. Refer section [Create Personal Access Token](../../connectors/team-foundation-server.md-create-personal-access-token).
+* Test Plan as a separate entity is supported from OIM version 7.46. For fresh project synchronization, it is recommended to synchronize Test Plan separately, followed by Test Suite, Test Run and Test Result. After migrating to OIM version >= 7.46 from older version, if you want to synchronize Test Plan separately in running integrations, please refer to [post migration guideline for Test Plan entity support](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist#Test_Plan_Entity_Support_for_TFS.2FAzure_DevOps).
+  
+## Test Suite
+* REST API–based synchronization is not supported for on-premises instances of Azure DevOps Server prior to version 2020.
+* Test Suite will migrate current state for on-premise instance with version equal and below version 2013 (Update 3) .
+* Synchronization of Test Case chart and Test Result chart created within test suite is not supported.
+* Query-Based Suite or Requirement-Based Suite.
+  * Once a Query-Based Suite or Requirement-Based Suite synced to target system, then after any new linkage of Test-Case with test suite added due to modification in test case. Hence newly added Test-Case linkage of Test Suite will not sync to the target system and any Test Run with corresponding test point will resulted into processing failure. In such case do following click [here](../../connectors/team-foundation-server.md#troubleshoot) for troubleshoot.
+* Any update in Test Suite Configuration will only when test suite is updated.
+* Ordering in Test Cases which are added to Test Suite is supported only for version 2019 onwards for on-premise deployments (i.e. Team Foundation Server) and all cloud deployments (i.e. Azure DevOps). In addition to that, ordering is only possible when the user has selected authentication type as Personal Access Token in the system configuration. Refer section [Create Personal Access Token](../../connectors/team-foundation-server.md#create-personal-access-token).
 * If source endpoint is Team Foundation Server with version lower than 2017 or target endpoint is not an Azure DevOps, all types of Test Suite (Static/Query based/Requirement) will be migrated as Static Suite.
-* If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized\}} as Static Test Suite. The Requirement-based test suite is \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized\}} as Requirement-based test suite and Query-based test suite is \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized\}} as Query-based test suite.
-  *   The
-
-      user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration\}} user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
+* If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is|synchronized as Static Test Suite. The Requirement-based test suite is synchronized as Requirement-based test suite and Query-based test suite is synchronized as Query-based test suite.
+  * The user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the sync user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
 * Synchronization Behavior of **Query Text** field of Query based Test Suite:
   * The Query based test suite has a field **Query Text** that represents the actual criteria that has been given in the Query Suite entity. The **Query Text** follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops).
   * Refer to the section [Synchronization Behavior of fields with WIQL format](../..connectors/team-foundation-server.md#synchronization-behavior-of-fields-with-wiql-format) to know general synchronization behavior applicable to this type of field. Following are the behavior specific to Query Text field of Test Suite entity:
@@ -106,6 +88,7 @@ order by [System.Id]
 ```
 
 **Sample Advance mapping for query text for above transformation**
+* Following is the sample mapping which will transformed Priority field clause of query text field of test suite entity as per the given test case mapping.After transformation using below sample mapping the field clause of [Priority] = 4 will be transformed as [Priority] = 3.
 
 ```xml
 <Query-space-Text>
@@ -125,20 +108,19 @@ This method requires the following inputs as mentioned in the following sequence
 * **Mapping Name:** Name of valid test case mapping to transform given field clause. This mapping is expected to have mapping for the field name given as part of the second input parameter.
 * **Enclosed Value With Quote:** Boolean parameter indicating whether to have the transformed value within single quotes or not. If invoked as `true()`, the value will be enclosed in single quotes in the resulting query text. If `false()`, then the transformed value will not be enclosed.
 * **Source System Id:** System id of the source end system.
-* **Target System Id:** System id of the target end system. \{% endif %\}
+* **Target System Id:** System id of the target end system. {% endif %}
 
 **Test Result and Test Run**
 
-* Synchronization is not supported with REST APIs.
+* REST API–based synchronization is not supported for on-premises instances of Azure DevOps Server prior to version 2020.
 * Test Run and Test Result will migrate current state. Any changes in the target system after synchronization may show inconsistency in data in both end points.
-* Following Test Result and Test Run will not synchronize (these Run and Result are logged in \{{SITENAME\}} logs):
+* Following Test Result and Test Run will not synchronize (these Run and Result are logged in OpsHub Integration Manager logs).
   * Run and Result created with Test Suite not existing in the source.
   * Run and Result created with Test Case not associated with the Test Suite while synchronization was performed.
   * Any Run and Result created with Test Case/Configuration, associated with Test Suite after synchronization.
   * Run and Result existing in Plan (e) Automated Run and Result are not supported.
 * Below are only for Test Result:
-  * Test Result Attachment link is not supported.
-  * of video format attachment of Result Steps and Result is not supported.
-  * Synchronization of Parameter Values for Step Results is not happening.
-    * Reason: ADO/TFS API limitations.
-  * 'Duration' field will get synchronized only when the value of 'Status' field is 'completed'.
+ * Synchronization of video format attachment of Result Steps and Result is not supported.
+ * Synchronization of Parameter Values for Step Results is not happening.
+   * Reason: ADO/TFS API limitations.
+ *'Duration' field will get synchronized only when the value of 'Status' field is 'completed'.
