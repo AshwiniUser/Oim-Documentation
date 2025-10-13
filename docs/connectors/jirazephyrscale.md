@@ -20,7 +20,7 @@ Refer the screenshot given below for reference.
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
 |----------------|--------------------------------------------|----------------|
-| **JWT Access Token** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | Provide the access token generated in Zephyr for the user given in the "User Email" field. For more details on Access Token, please refer to [User Token Generation](user-token-generation) |
+| **JWT Access Token** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | Provide the access token generated in Zephyr for the user given in the "User Email" field. For more details on Access Token, please refer to [User Token Generation](#user-token-generation) |
 | **Metadata JSON** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | This data is in JSON format according to our knowledge of system metadata (entity type, field names, lookup...), the user can edit it based on his/her Jira Zephyr instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to **Understanding JSON Input** section. |
 
 ## Understanding JSON Input
@@ -191,7 +191,7 @@ Refer the screenshot given below for reference.
 
 # Known Behavior/ Limitations
 
-* Polling for all entity types requires a full scan of all records; therefore, choose the polling frequency judiciously. Refer [Best Practices for Polling Frequency](../integrate/best-practices.md#polling-frequency-scheduling)
+* Polling for all entity types requires a full scan of all records; therefore, choose the polling frequency judiciously. Refer [Best Practices for Polling Frequency](../integrate/best-practises.md#polling-frequency-scheduling)
 * Shared Step is not supported.
 * The following limitations exist in <code class="expression">space.vars.SITENAME</code> due to API restrictions:
 * Delete and Archive functionality is not supported.
