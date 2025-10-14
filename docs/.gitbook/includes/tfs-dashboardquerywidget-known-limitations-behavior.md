@@ -5,8 +5,9 @@
 * These entities do not have historical data, hence historical data synchronization is not supported.
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* Criteria based synchronization and target lookup is not supported for Dashboard and Query entity. Refer to [Criteria Configuration in integration](../../integrate/integration-configuration.md#criteria_configuration) and [Search in Target Before Sync](../../integrate/integration-configuration.md#search-in-target-before-sync) to know more on these features.
+* Criteria based synchronization and target lookup is not supported for Dashboard and Query entity. Refer to [Criteria Configuration in integration](../../integrate/integration-configuration.md#criteria-configuration) and [Search in Target Before Sync](../../integrate/integration-configuration.md#search-in-target-before-sync) to know more on these features.
 * Criteria based synchronization is not supported for Query entity. Target lookup is only supported for 'Folder' field, please refer to [Target lookup query format](../../connectors/team-foundation-server.md#supported-target-lookup-query-for-query-entity) for its target lookup query format.
+
 {% endif %}
 
 **Entity Specific**
