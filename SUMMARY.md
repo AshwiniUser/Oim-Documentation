@@ -155,7 +155,12 @@
             * [Where to find the logs generated during the application's installation?](docs/help-center/faqs/installer/logs-generated-during-oim-installation.md)  
             * [Can the application be installed on the same machine where one of the end system is installed?](docs/help-center/faqs/installer/oim-and-system-installed-on-same-machine.md)  
             * [Is it mandatory for the database to be installed on the same server on which the application is installed?](docs/help-center/faqs/installer/oim-and-database-on-same-server.md)  
-            * {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}[Can the OpsHub Migrator for Microsoft Azure DevOps Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md){% endif %}{% if "OpsHub Integration Manager" === space.vars.SITENAME %}[Can the OpsHub Server Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md){% endif %}
+            {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
+            * [Can the OpsHub Migrator for Microsoft Azure DevOps Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md)
+            {% endif %}
+            {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+            * [Can the OpsHub Server Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md)
+            {% endif %}
             * [Which is our recommended database for the application installation?](docs/help-center/faqs/installer/database-recommended-for-oim.md)  
             * [Why am I getting the error "Please provide the correct verification code" in registration process while installing application?](docs/help-center/faqs/installer/verification-code-error.md)  
             * [How to upgrade/migrate the application?](docs/help-center/faqs/installer/how-to-upgrade-oim.md)  
