@@ -5,7 +5,7 @@
 * These entities do not have historical data, hence historical data synchronization is not supported.
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* Criteria based synchronization and target lookup is not supported for Dashboard and Query entity. Refer to [Criteria Configuration in integration](../../integration-configuration.md#criteria_configuration) and [Search in Target Before Sync](../../integrate/integration-configuration.md#search-in-target-before-sync) to know more on these features.
+* Criteria based synchronization and target lookup is not supported for Dashboard and Query entity. Refer to [Criteria Configuration in integration](../../integrate/integration-configuration.md#criteria_configuration) and [Search in Target Before Sync](../../integrate/integration-configuration.md#search-in-target-before-sync) to know more on these features.
 * Criteria based synchronization is not supported for Query entity. Target lookup is only supported for 'Folder' field, please refer to [Target lookup query format](../../connectors/team-foundation-server.md#supported-target-lookup-query-for-query-entity) for its target lookup query format.
 {% endif %}
 
@@ -27,7 +27,7 @@ Following are the limitations and behaviors specific to the individual entities 
   * When Azure DevOps is target:
     * If **Owner** field contains a value, then the dashboard will be created with type **Project Dashboard**.
     * If **Owned by team** field contains a value, then the dashboard will be created with type **Team Dashboard**.
-    * If both fields contain value, then you will get a processing error \[OH-TFS/AzureDevOps-1119].
+    * If both fields contain value, then you will get a processing error [OH-TFS/AzureDevOps-1119](../../help-center/troubleshooting/errors/tfs/oh-tfs-azure-devops-1119.md).
 {% endif %}
 
 **Query Entity**
@@ -40,7 +40,7 @@ Following are the limitations and behaviors specific to the individual entities 
   **Reason:** ADO/TFS API unavailability.
 * Synchronization Behavior of **WIQL** field:
   * The Query entity has a field WIQL that represents the actual criteria that are given in the Query. The WIQL follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops).
-  *   Refer to section [Synchronization Behavior of fields with WIQL format](../../connectors/team-foundation-server.md#snchronization-behavior-of-fields-with-wiql-format) to know general sync behavior applicable to this type of field. Following are the behavior specific to the WIQL field of the Query entity.
+  *   Refer to section [Synchronization Behavior of fields with WIQL format](../../connectors/team-foundation-server.md#synchronization-behavior-of-fields-with-wiql-format) to know general sync behavior applicable to this type of field. Following are the behavior specific to the WIQL field of the Query entity.
       **User values mentioned in WIQL**
 
       * Azure DevOps End point Format - User Display Name . **Example:** demouser1 [demouser1@opshub.com](mailto:demouser1@opshub.com)
