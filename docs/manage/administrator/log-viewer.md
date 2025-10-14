@@ -14,7 +14,7 @@ There are different logs maintained and stored under **`<code class="expression"
 | Integrations           | <p>Folder contains the files for the logs of each</p><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Migrator for Microsoft Azure DevOps&#x22; === space.vars.SITENAME"><p>migrations</p></div><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Integration Manager&#x22; === space.vars.SITENAME"><p>integrations</p></div> |
 
 
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 # Log Settings
 
 System log helps to view logs for tracking backend activity in <code class="expression">space.vars.SITENAME</code>. Usually logs are useful when any failure or unusual behavior is detected in integration. System log can store logs in 5 different levels. Logs will capture information based on logging level set in System log.
