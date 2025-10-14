@@ -18,7 +18,8 @@ Following are the limitations and behaviors specific to the individual entities 
   * Reason: ADO/TFS API unavailability
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-- Dashboard can be created with **Dashboard Type** as **Project Dashboard** or a **Team Dashboard**.
+
+* Dashboard can be created with **Dashboard Type** as **Project Dashboard** or a **Team Dashboard**.
   * For Team Dashboard, **Owned by team** will be applicable and for **Project Dashboard**, **Owner** field will be applicable.
   * When Azure DevOps is source:
     * Dashboard type details will be available in **Dashboard Type** field (read-only field)
@@ -28,6 +29,7 @@ Following are the limitations and behaviors specific to the individual entities 
     * If **Owner** field contains a value, then the dashboard will be created with type **Project Dashboard**.
     * If **Owned by team** field contains a value, then the dashboard will be created with type **Team Dashboard**.
     * If both fields contain value, then you will get a processing error [OH-TFS/AzureDevOps-1119](../../help-center/troubleshooting/errors/tfs/oh-tfs-azure-devops-1119.md).
+
 {% endif %}
 
 **Query Entity**
